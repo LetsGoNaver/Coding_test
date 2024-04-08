@@ -34,13 +34,14 @@ def solution(n,graph):
         depth = point[0]
         x = point[1]
         blown = 0
+        
         if graph[depth][x] != 0:
             inx = d.index(direction)
             moved_sand = 0
             for i in range(10):
                 td = point[0]
                 tx = point[1]
-                sand = int(graph[td][tx]*percentage[i])
+                sand = int(graph[depth][x]*percentage[i])
                 moved_sand += sand
                 td += moving[inx][i][0]
                 tx += moving[inx][i][1]
@@ -52,7 +53,7 @@ def solution(n,graph):
                 if i == 9:
                     td = point[0]
                     tx = point[1]
-                    sand = graph[td][tx] - moved_sand
+                    sand = graph[depth][x] - moved_sand
                     td += moving[inx][i][0]
                     tx += moving[inx][i][1]
                     if is_out(td,tx):
