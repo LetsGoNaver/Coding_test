@@ -16,3 +16,5 @@ def solution(sequence, k):
         
     answer.sort(key = lambda x:x[2])
     return answer[0][0:2]
+
+print("hi")
