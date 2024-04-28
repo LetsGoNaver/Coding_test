@@ -1,6 +1,5 @@
 def solution(sequence, k):
     answer = []
-    count = 0
     interval_sum = 0
     end = 0
     n = len(sequence)
