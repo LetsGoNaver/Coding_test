@@ -14,9 +14,10 @@ def solution(plans):
     
     timmer = [0]*len(plans)
     start = plans[0][1]
+    end = plans[-1][1]
     ready_q = []
     operating = []
-    for t in range(start,start+total_time+1):
+    for t in range(start,end+total_time+1): # 처음에는 start,start+total_times 로 했는데 이러면 엄청 나중에 작업이 필요한게 무시됨. 충분히 길게 시간을 잡아줘야함.
         if operating:
             inx = operating[0]
             timmer[inx] += 1
